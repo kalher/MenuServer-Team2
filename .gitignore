@@ -6,3 +6,11 @@ out
 *.iml
 test.*
 target
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
