@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.*;
 import org.apache.commons.io.IOUtils;
+//import sun.misc.IOUtils;
 
 import javax.servlet.ServletContext;
 
@@ -21,7 +23,7 @@ public class HelloController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
+		model.addAttribute("message", "EatOut Menu");
 		return "hello";
 	}
 
@@ -29,7 +31,7 @@ public class HelloController {
     @ResponseBody
     public String printWelcomeXml() {
         String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
-                "<message>Hello world</message>";
+                "<message>EatOut Menu</message>";
         return xml;
     }
     @RequestMapping( value = "/picture", method = RequestMethod.GET , produces = MediaType.IMAGE_JPEG_VALUE)

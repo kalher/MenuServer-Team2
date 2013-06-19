@@ -18,8 +18,9 @@
             <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter">
                 <property name="supportedMediaTypes">
                     <list>
+                      <!--  <value>image/jpeg</value> -->
                         <value>image/jpeg</value>
-                        <value>image/png</value>
+                        <!-- <value>image/png</value>  -->
                     </list>
                 </property>
             </bean>
