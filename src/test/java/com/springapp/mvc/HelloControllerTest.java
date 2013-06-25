@@ -9,7 +9,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.ui.ModelMap;
 
 import javax.servlet.ServletContext;
-
 import java.io.IOException;
 import java.io.InputStream;
 

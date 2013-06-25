@@ -21,9 +21,21 @@ public class HelloController {
     @Autowired
     ServletContext servletContext;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/models", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "EatOut Menu");
+		model.addAttribute("message", "EatOut Menu ");
+		model.addAttribute("dish1", "Chicken");
+		model.addAttribute("dish2", "Katogo");
+		model.addAttribute("dish3", "Beans on toast");
+		model.addAttribute("dish4", "Beef");
+		model.addAttribute("price1", "$50");
+		model.addAttribute("price2", "$60");
+		model.addAttribute("price3", "$70");
+		model.addAttribute("price4", "$80");
+		model.addAttribute("type", "Dish Type");
+		model.addAttribute("price", "Price");
+
+
 		return "hello";
 	}
 
@@ -31,9 +43,24 @@ public class HelloController {
     @ResponseBody
     public String printWelcomeXml() {
         String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
-                "<message>EatOut Menu</message>";
+                "<message>Kololo Courts</message>";
+
         return xml;
     }
+
+    //for fried beef
+
+    @RequestMapping(value = "/beef", method = RequestMethod.GET, headers={"Accept=application/xml"})
+    @ResponseBody
+    public String printFriedBeefXml() {
+        String xml1 = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+                "<message>Fried Beef</message>" +
+                "<message>UGX 10,000</message>";
+
+
+        return xml1;
+    }
+
     @RequestMapping( value = "/picture", method = RequestMethod.GET , produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody
     public byte[] renderPicture() throws IOException {
