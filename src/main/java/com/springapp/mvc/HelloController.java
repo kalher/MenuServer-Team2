@@ -54,8 +54,9 @@ public class HelloController {
     @ResponseBody
     public String printFriedBeefXml() {
         String xml1 = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+
                 "<message>Fried Beef</message>" +
-                "<message>UGX 10,000</message>";
+                "<message>.           UGX 10,000</message>";
 
 
         return xml1;
