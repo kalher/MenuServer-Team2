@@ -38,7 +38,7 @@ public class HelloControllerTest {
         model = new ModelMap();
         String expectedView = "hello";
 
-        String actualView = helloController.printWelcome(model);
+        String actualView = helloController.printBeef(model);
 
         assertThat(actualView, is(expectedView));
     }
